@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import { AppContext } from '../../../Context/AppContext.js';
+import { AppContext } from '../../../context/AppContext.js';
 import { Link, Navigate} from "react-router-dom";
 import io from 'socket.io-client';
 import logout from '../../../assets/logout.svg';

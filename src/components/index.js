@@ -1,16 +1,22 @@
-import ChatApp from "../Pages/ChatApp/ChatApp";
-import Login from "../Pages/Login/Login";
-import LoginBtn from "./Login/Log in/LoginBtn";
-import Options from "./Login/options/Options";
-import { SignUp } from "./Login/signUp/SignUp";
+import { Login } from "./auth/login/Login";
+import { Options } from "./auth/options/Options";
+import { SignUp } from "./auth/signUp/SignUp";
+
+
+
+import { ChatScreen } from "../screens/chat/ChatScreen";
+import { LoginScreen } from "../screens/login/LoginScreen";
+
 import Complaints from "./Main/Complaints/Complaints";
 import Delete from "./Main/Delete/Delete";
 import SubMain from "./Main/SubMain/Submain/SubMain";
 
+
+
 export {
-  ChatApp,
+  ChatScreen,
+  LoginScreen,
   Login,
-  LoginBtn,
   Options,
   SignUp,
   Complaints,

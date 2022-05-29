@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import { AppContext } from '../../../../../Context/AppContext.js';
+import { AppContext } from '../../../../../context/AppContext.js';
 import Message from '../Message/Message';
 import axios from 'axios';
 import '../Chat.css';

@@ -1,6 +1,6 @@
 import React, {useContext, useState} from 'react';
 import {Navigate} from 'react-router-dom';
-import { AppContext } from '../../../../Context/AppContext.js';
+import { AppContext } from '../../../../context/AppContext.js';
 import Read from './Read/Read';
 import UnRead from './Read/UnRead';
 import html2canvas from "html2canvas";

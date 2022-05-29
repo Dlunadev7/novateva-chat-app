@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useContext, useState} from 'react';
-import { AppContext } from '../../../Context/AppContext.js';
+import { AppContext } from '../../../context/AppContext.js';
 import '../SubMain/Submain/Submain.css'
 import './Complaints.css';
 

@@ -1,5 +1,5 @@
 import React, { useContext, useState} from 'react';
-import { AppContext } from '../../../Context/AppContext.js';
+import { AppContext } from '../../../context/AppContext.js';
 import userPhoto from '../../../assets/user.png';
 import '../SubMain/Submain/Submain.css'
 import './Delete.css';

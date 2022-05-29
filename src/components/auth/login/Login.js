@@ -1,12 +1,14 @@
 import React, {useState, useEffect, useContext} from 'react';
 import { Navigate } from "react-router-dom";
-import { AppContext } from '../../../Context/AppContext.js';
+import { AppContext } from '../../../context/AppContext.js';
 import axios from "axios";
 
-import './LoginBtn.css';
+import './login.css';
 
 
-export default function LoginBtn() {
+export const Login = () => {
+
+  
 
   const {token, setToken,redirect, setRedirect,  loading, setLoading,  setLogOut} = useContext(AppContext);
   
@@ -60,7 +62,6 @@ export default function LoginBtn() {
             <input type='password' name='password' value={form.password} onChange={(e)=>setForm({...form, password:`${e.target.value}`})} />
           </div>
         </div>
-        {/* <p style={{display:`${error ? ('block'):('none')}`}}>Email or password incorrect</p> */}
         {error ? (<p>Email or password incorrect</p>):('')}
          
         <button type='submit' className='submit' onClick={handleLogIn}>

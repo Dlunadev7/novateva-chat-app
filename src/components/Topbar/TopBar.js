@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import { AppContext } from '../../Context/AppContext';
+import { AppContext } from '../../context/AppContext';
 import userPhoto from '../../assets/user.png';
 import bell from '../../assets/bell.svg';
 import searchIcon from '../../assets/search-icon.svg';

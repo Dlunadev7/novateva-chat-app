@@ -2,8 +2,8 @@ import React, { useContext, useEffect } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import axios from 'axios'
 
-import { ChatApp, Complaints, Delete, Login, LoginBtn, Options, SignUp , SubMain } from '../components'
-import { AppContext } from '../Context/AppContext'
+import { ChatScreen, Complaints, Delete, LoginScreen, Login, Options, SignUp , SubMain } from '../components'
+import { AppContext } from '../context/AppContext'
 
 export const AppRouter = () => {
 
@@ -98,7 +98,7 @@ export const AppRouter = () => {
     <BrowserRouter>
       <Routes>
         <Route>
-          <Route path="chatapp" element={<ChatApp />} >
+          <Route path="chatapp" element={<ChatScreen />} >
             <Route path="complaints" element={<Complaints />} />
             <Route path="delete" element={<Delete />} />
             <Route path="" element={<SubMain />} />
@@ -107,10 +107,10 @@ export const AppRouter = () => {
         </Route>
         
         <Route>
-          <Route exact path="/" element={<Login />}>
+          <Route exact path="/" element={<LoginScreen />}>
           
             <Route path="signin" element={<SignUp />} />
-            <Route path="login" element={<LoginBtn />} />
+            <Route path="login" element={<Login />} />
             <Route path="" element={<Options />} />
       
           </Route>

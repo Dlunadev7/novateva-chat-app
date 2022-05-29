@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import { AppContext } from '../../../../../Context/AppContext.js';
+import { AppContext } from '../../../../../context/AppContext.js';
 import axios from 'axios';
 import io from 'socket.io-client';
 import userPhoto from '../../../../../assets/user.png'

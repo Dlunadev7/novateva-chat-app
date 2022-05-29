@@ -1,5 +1,5 @@
 import React, {useEffect, useContext} from 'react';
-import { AppContext } from '../../../Context/AppContext.js';
+import { AppContext } from '../../../context/AppContext.js';
 import ControlPanel from '../ControlPanel/ControlPanel';
 
 import './Main.css';

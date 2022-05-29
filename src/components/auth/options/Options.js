@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import './Options.css';
 
 
-export default function Options() {
+export const Options = () => {
 
   
 

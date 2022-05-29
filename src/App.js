@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { AppProvider } from './Context/AppContext.js';
+import { AppProvider } from './context/AppContext.js';
 import { AppRouter } from './routes/AppRouter';
 
 function App() {

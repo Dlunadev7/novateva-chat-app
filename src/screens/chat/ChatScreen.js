@@ -1,12 +1,10 @@
 import TopBar from '../../components/Topbar/TopBar';
 import Main from '../../components/Main/Main/Main';
 
-import './ChatApp.css';
+import './chatScreen.css';
 
 
-export default function ChatApp() {
-
-  
+export const ChatScreen = () => {
 
   return (
     <div className="ChatApp">

@@ -1,12 +1,11 @@
 import React, {useEffect, useContext} from 'react';
-import { AppContext } from '../../Context/AppContext.js';
+import { AppContext } from '../../context/AppContext.js';
 import { Outlet  } from "react-router-dom";
 
-import './Login.css';
+import './loginScreen.css';
 
 
-export default function Login() {
-
+export const LoginScreen = () => {
   const { setRedirect, setLoading} = useContext(AppContext);
 
   useEffect(() => {
