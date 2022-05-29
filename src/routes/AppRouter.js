@@ -109,8 +109,8 @@ export const AppRouter = () => {
         <Route>
           <Route exact path="/" element={<LoginScreen />}>
           
-            <Route path="signin" element={<SignUp />} />
-            <Route path="login" element={<Login />} />
+            <Route path="signup" element={<SignUp />} />
+            <Route path="signin" element={<Login />} />
             <Route path="" element={<Options />} />
       
           </Route>

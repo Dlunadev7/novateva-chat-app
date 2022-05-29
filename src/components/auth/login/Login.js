@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useContext} from 'react';
-import { Navigate } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { AppContext } from '../../../context/AppContext.js';
 import axios from "axios";
 
@@ -7,8 +7,6 @@ import './login.css';
 
 
 export const Login = () => {
-
-  
 
   const {token, setToken,redirect, setRedirect,  loading, setLoading,  setLogOut} = useContext(AppContext);
   
@@ -48,26 +46,101 @@ export const Login = () => {
   }
 
   return (
-      <div className="LoginBtn" value={form} >
-        <div className='form-item'>
-          <label>Email</label>
-          <div>
-            <input type='email' name="email" value={form.email} onChange={(e)=>setForm({...form, email:`${e.target.value}`})} />
-          </div>
 
-        </div>
-        <div className='form-item'>
-          <label>Password</label>
-          <div>
-            <input type='password' name='password' value={form.password} onChange={(e)=>setForm({...form, password:`${e.target.value}`})} />
-          </div>
-        </div>
-        {error ? (<p>Email or password incorrect</p>):('')}
-         
-        <button type='submit' className='submit' onClick={handleLogIn}>
-          {loading ? ('Loading...'):('Log in')}
+<div className="home__login">
+    <div className="home__login__container">
+      <div className="home__login__forms">
+        <article className="form">
+          <form className="form__dates" onSubmit={handleLogIn} value={form}>
+          <label className="form__place">
+            Email
+            <span className="form__place__container">
+              <input 
+                className="form__place__input" 
+                type='email' 
+                name="email" 
+                placeholder="john_doe@gmail.com" 
+                value={form.email} 
+                onChange={(e)=>setForm({...form, email:`${e.target.value}`})}
+              />
+            </span>
+          </label>
+          <label className="form__place">
+            Password
+            <span className="form__place__container">
+              <input className="form__place__input"
+               min={8}
+               placeholder="********"
+               type='password' 
+               name='password' 
+               value={form.password} 
+               onChange={(e)=>setForm({...form, password:`${e.target.value}`})}
+               />
+            </span>
+          </label>
+          {error ? (<p>Email or password incorrect</p>):('')}
+          <span>
+            ¿Need Account? <Link to={"/signUp"}>Sign Up</Link>
+          </span>
+          <button className="form__submit" onClick={handleLogIn}>
+            {loading ? ('Loading...'):('Log in')}
           </button>
-        {redirect ? (<Navigate to='/chatapp' replace={true} />):('')}
+          </form>
+        </article>  
       </div>
+    </div>
+    {redirect ? (<Navigate to='/chatapp' replace={true} />):('')}
+  </div>
+
   );
 }
+
+/*
+
+<div className="home__login">
+    <div className="home__login__container">
+      <div className="home__login__forms">
+        <article className="form">
+          <h2 className="form__title">Sign In</h2>
+          <form className="form__dates" onSubmit={handleSubmit} value={form}>
+          <label className="form__place">
+            Email
+            <span className="form__place__container">
+              <input 
+                className="form__place__input" 
+                type='email' 
+                name="email" 
+                placeholder="john_doe@gmail.com" 
+                value={form.email} 
+                onChange={(e)=>setForm({...form, email:`${e.target.value}`})}
+              />
+            </span>
+          </label>
+          <label className="form__place">
+            Password
+            <span className="form__place__container">
+              <input className="form__place__input"
+               min={8}
+               placeholder="********"
+               type='password' 
+               name='password' 
+               value={form.password} 
+               onChange={(e)=>setForm({...form, password:`${e.target.value}`})}
+               />
+            </span>
+          </label>
+          {error ? (<p>Email or password incorrect</p>):('')}
+          <span>
+            ¿Need Account? <Link to={"/signUp"}>Sign Up</Link>
+          </span>
+          <button className="form__submit" onClick={handleLogIn}>
+            {loading ? ('Loading...'):('Log in')}
+          </button>
+          </form>
+        </article>  
+      </div>
+    </div>
+    {redirect ? (<Navigate to='/chatapp' replace={true} />):('')}
+  </div>
+
+*/
