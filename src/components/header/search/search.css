@@ -1,0 +1,29 @@
+.header__search__wrapper {
+  background: linear-gradient(178.18deg, #FD749B -13.56%, #281AC8 158.3%);
+  border-radius: 100px;
+  width: 422px;
+  height: 41px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__search {
+  background-color: #fff;
+  width: 421px;
+  height: 39px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.search__icon {
+  margin: 18px;
+  width: 20px;
+}
+
+.search__input {
+  border: unset;
+  outline: unset;
+  color: #858585;
+}
