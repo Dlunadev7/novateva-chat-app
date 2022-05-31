@@ -20,6 +20,7 @@ export const Login = () => {
     password: ''
   })
 
+  const { email, password } = form;
 
   useEffect(() => {
     setRedirect(false)
@@ -29,10 +30,20 @@ export const Login = () => {
 
   const handleLogIn = async (e) => {
 
-    if(error) {
+    if(email.length < 1) {
       toast('Contraseña o usuario incorrecto!', {
         position: "top-right",
-        autoClose: 3000,
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      })
+    } else if(password.length < 1) {
+      toast('Contraseña o usuario incorrecto!', {
+        position: "top-right",
+        autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -42,7 +53,7 @@ export const Login = () => {
     } else {
       toast('Incio de usuario con exito!', {
         position: "top-right",
-        autoClose: 3000,
+        autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -50,6 +61,8 @@ export const Login = () => {
         progress: undefined,
       });  
     }
+  
+  
 
     e.preventDefault();
     

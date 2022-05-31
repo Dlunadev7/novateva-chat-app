@@ -18,19 +18,64 @@ export const SignUp = () => {
     password: ''
   })
 
+  const { name, lastName, email, password } = form;
+
   const handleSignIn = async(e) => {
 
     e.preventDefault();
 
-    toast('¡Registracion de usuario con exito!', {
-      position: "top-right",
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
+    if(name.length < 1) {
+      toast('El nombre es obligatorio!', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      })
+    } else if(lastName.length < 1) {
+      toast('El Apellido es obligatorio!', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      })
+    } else if(email.length < 1) {
+      toast('El Email es obligatorio!', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      })
+    } else if(password.length < 1) {
+      toast('La password es obligatorio!', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      })
+    } else {
+      toast('¡Registracion de usuario con exito!', {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
       });
+    }
+
 
     await axios.post('https://novateva-codetest.herokuapp.com/users', {
       'email' : `${form.email}`,
