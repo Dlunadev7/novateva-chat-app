@@ -27,6 +27,11 @@ export const Complaints = () => {
     
   }
 
+  const handleCancelBtn = () => {
+    setUrl('')
+    setComplaint('')
+  }
+
   return (
     <div className='complaints'>
       <div className='sub-main-container' style={{flexDirection: 'column'}} >
@@ -49,7 +54,7 @@ export const Complaints = () => {
               {
                 url ? (
                   // <button onClick={()=>setUrl('')} className='complaints__cancel'>Cancel</button>
-                        <ButtonClasic title={'Cancel'} handleClick={() => setUrl('')}  />
+                        <ButtonClasic title={'Cancel'} handleClick={handleCancelBtn}  />
                       ):(<div className='complaints__button'></div>)}
     
                       {complaintError ? (<p className='complaints__error'>Couldn't send report</p>):('')}
