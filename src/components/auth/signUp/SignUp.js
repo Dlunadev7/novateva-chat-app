@@ -32,7 +32,7 @@ export const SignUp = () => {
       progress: undefined,
       });
 
-    await axios.post('https://novateva-codetest.herokuapp.com/users', {
+    await axios.post('https://novateva-codetest.herokuacompp.com/users', {
       'email' : `${form.email}`,
       'password' : `${form.password}`,
       "firstName": `${form.name}`,
@@ -122,7 +122,7 @@ export const SignUp = () => {
         </article>
         </div>
       </div>
-      {redirectLogIn ? (<Navigate to='/login' replace={true} />):('')}
+      {redirectLogIn ? (<Navigate to='/signin' replace={true} />):('')}
     </div>
   );
 }
