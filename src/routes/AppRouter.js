@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import axios from 'axios'
 
-import { ChatScreen, Complaints, Delete, LoginScreen, Login, Options, SignUp , SubMain } from '../components'
+import { ChatScreen, Complaints, Delete, LoginScreen, Login, SignUp , SubMain } from '../components'
 import { AppContext } from '../context/AppContext'
 
 export const AppRouter = () => {
@@ -103,21 +103,14 @@ export const AppRouter = () => {
             <Route path="delete" element={<Delete />} />
             <Route path="" element={<SubMain />} />
           </Route>
-
         </Route>
-        
         <Route>
           <Route exact path="/" element={<LoginScreen />}>
-          
             <Route path="signup" element={<SignUp />} />
             <Route path="signin" element={<Login />} />
-            <Route path="" element={<Options />} />
-      
+            <Route path="" element={<Login />} />
           </Route>
-
         </Route>
-
-        
       </Routes>
     </BrowserRouter>
   )

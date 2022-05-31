@@ -13,6 +13,7 @@ function App() {
       <AppProvider>
         <AppRouter />
       </AppProvider>
+      
       <ToastContainer
         position="top-right"
         autoClose={5000}
@@ -24,9 +25,7 @@ function App() {
         draggable
         pauseOnHover
         />
-        {/* Same as */}
       <ToastContainer />
-
     </div>
   );
 }

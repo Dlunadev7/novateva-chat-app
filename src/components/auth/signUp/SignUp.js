@@ -9,7 +9,7 @@ import './form.css'
 
 
 export const SignUp = () => {
-
+  
   const [redirectLogIn, setRedirectLogIn] = useState(false);
   const [form, setForm] = useState({
     name:'',
@@ -19,7 +19,7 @@ export const SignUp = () => {
   })
 
   const handleSignIn = async(e) => {
-    
+
     e.preventDefault();
 
     toast('¡Registracion de usuario con exito!', {
@@ -113,7 +113,7 @@ export const SignUp = () => {
             </span>
           </label>
           <span>
-            ¿Need Account? <Link to={"/signIn"}>Sign In</Link>
+          ¿Have Account? <Link to={"/signIn"}>Sign In</Link>
           </span>
           <button className="form__submit" onClick={handleSignIn}>
             Sign Up
@@ -123,7 +123,6 @@ export const SignUp = () => {
         </div>
       </div>
       {redirectLogIn ? (<Navigate to='/login' replace={true} />):('')}
-      
     </div>
   );
 }

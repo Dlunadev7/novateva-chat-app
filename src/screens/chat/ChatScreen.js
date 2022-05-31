@@ -1,5 +1,5 @@
-import TopBar from '../../components/Topbar/TopBar';
-import Main from '../../components/Main/Main/Main';
+import { Header } from '../../components/header/Header';
+import Main from '../../components/main/mainContent/Main';
 
 import './chatScreen.css';
 
@@ -8,7 +8,7 @@ export const ChatScreen = () => {
 
   return (
     <div className="ChatApp">
-      <TopBar/>
+      <Header/>
       <Main />
     </div>
   );
