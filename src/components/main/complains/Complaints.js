@@ -1,8 +1,8 @@
 import axios from 'axios';
 import React, { useContext, useState} from 'react';
-import { AppContext } from '../../../context/AppContext.js';
-import { Button } from '../../button/Button.js';
-import '../subMain/Submain/Submain.css'
+import { AppContext } from '../../../context/AppContext';
+import { ButtonClasic } from '../../button/ButtonClasic';
+import '../subMain/submain/submain.css'
 import './complaints.css';
 
 export const Complaints = () => {
@@ -45,17 +45,23 @@ export const Complaints = () => {
             onChange={(e)=> setComplaint(e.target.value)}
             maxLength="200"
             placeholder='Tell us about the problem' />
-          {url ? (
-            // <button onClick={()=>setUrl('')} className='complaints__cancel'>Cancel</button>
-            <Button onClick={() => setUrl('')} />
-          ):(<div className='complaints__button'></div>)}
-
-          {complaintError ? (<p className='complaints__error'>Couldn't send report</p>):('')}
-
-          {url && complaint.length > 0 ? (
-              <button onClick={handleComplaints} className='complaints__send' >Send</button>
-          ):(<div className='complaints__error'></div>)}
-        
+          <div className="complaints__buttons">
+              {
+                url ? (
+                  // <button onClick={()=>setUrl('')} className='complaints__cancel'>Cancel</button>
+                        <ButtonClasic title={'Cancel'} handleClick={() => setUrl('')}  />
+                      ):(<div className='complaints__button'></div>)}
+    
+                      {complaintError ? (<p className='complaints__error'>Couldn't send report</p>):('')}
+    
+                      {url && complaint.length > 0 ? (
+                    <button onClick={handleComplaints} className='buttonClasic'>
+                      <p className="buttonClasic__title">Send</p>
+                    </button>
+                ):(<div className='complaints__error'></div>)
+                
+              }
+          </div>        
         </div>
       </div>
     </div>

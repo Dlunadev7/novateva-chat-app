@@ -3,9 +3,9 @@ import { AppContext } from '../../../../../context/AppContext.js';
 import axios from 'axios';
 import io from 'socket.io-client';
 import userPhoto from '../../../../../assets/user.png'
-import './UserCard.css';
+import './userCard.css';
 
-export default function UserCard( {id, img, chatId, photo}){
+export const UserCard = ( {id, img, chatId, photo}) => {
 
     const {user, token, setMessages,chats, setChats, userList, newChat, setNewChat, unReadNum} = useContext(AppContext);
     

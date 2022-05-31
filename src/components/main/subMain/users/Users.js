@@ -1,10 +1,10 @@
-import React, {useContext, useEffect} from 'react';
+import React, { useContext } from 'react';
 import { AppContext } from '../../../../context/AppContext.js';
 import userPhoto from  '../../../../assets/user.png';
-import UserCard from './UserCard/UserCard';
-import './UserList.css';
+import { UserCard } from './userCard/UserCard';
+import './users.css';
 
-export default function UserList(){
+export const Users = () => {
 
     const {user, chats, userList, newChat, setNewChat} = useContext(AppContext);
 

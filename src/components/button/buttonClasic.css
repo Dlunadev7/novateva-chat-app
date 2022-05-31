@@ -3,23 +3,24 @@
 }
 
 .buttonClasic {
-  width: 273px;
+  width: 100%;
+  margin-right: 12px;
   height: 44px;
   background: linear-gradient(178.18deg, #FD749B -13.56%, #281AC8 158.3%);
-  border-bottom-right-radius: 50px; 
-  border-top-right-radius: 50px;
+  border-radius: 50px;
   display: flex;
   align-items: center;
-  padding-left: 45px;
   position: relative;
-  margin-bottom: 32px;
+  margin-top: 32px;
   cursor: pointer;
+  justify-content: center;
+  align-self: flex-end;
 }
 
-.button__title {
-  font-size: 12px;
+.buttonClasic__title {
+  font-size: 16px;
   color: #fff;
-  margin-left: 12px;
+  font-weight: 700;
 }
 
 .button__count {

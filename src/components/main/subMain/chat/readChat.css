@@ -82,17 +82,6 @@
     outline: none;
 }
 
-
-.input-message button{
-    width: 15%;
-    height: 100%;
-    background:  linear-gradient(178.18deg, #FD749B -13.56%, #281AC8 158.3%);
-    border-style: none;
-    border-radius: 20px;
-    color: white;
-    font-weight: 700;
-    letter-spacing: 0.1rem;
-}
 .input-message .report{
     height:40px;
     width: 70px;
@@ -102,12 +91,11 @@
     border-radius: 10px;
     position: absolute;
 }
-.input-message .report:hover{
-    
-    width: 75px;
-}
-.input-message button:hover{
-    width:17%;
+
+.search__chat__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .no-chat{

@@ -1,13 +1,15 @@
 import React, {useContext} from 'react';
-import { AppContext } from '../../../../../context/AppContext.js';
+import { AppContext } from '../../../../../context/AppContext';
 import trashCan from '../../../../../assets/trash-can.svg';
-import './Message.css';
 import  moment  from 'moment';
 import axios from 'axios';
 
-export default function Message( {user, id, date, content, postedBy}){
+import './message.css';
+
+export const Message = ( {user, id, date, content, postedBy}) => {
 
     const {userList,token, messages, setMessages, setChats} = useContext(AppContext);
+
 
     const dateFrom = moment(date).fromNow();
 

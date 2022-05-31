@@ -1,13 +1,13 @@
 import React, {useContext, useState} from 'react';
-import {Navigate} from 'react-router-dom';
-import { AppContext } from '../../../../context/AppContext.js';
-import Read from './Read/Read';
-import UnRead from './Read/UnRead';
+import { Navigate } from 'react-router-dom';
+import { AppContext } from '../../../../context/AppContext';
+import { Read } from './read/Read';
+import { UnRead } from './read/UnRead';
 import html2canvas from "html2canvas";
-import './Chat.css';
+import './readChat.css';
 import axios from 'axios';
 
-export default function Chat(){
+export const ReadChat = () => {
     const {token, messages,  setMessages, setUrl} = useContext(AppContext);
     const [sendMsj, setSendMsj] = useState('')
     const [loadingComplaint, setLoadingCompl] = useState(false)
@@ -17,6 +17,10 @@ export default function Chat(){
 
     const dateFrom =(date)=> new Date(date).getTime();
     
+
+      
+    
+
 
     const handleSend = async ()=> {
         let temMessage =  messages.userMessages;
@@ -64,7 +68,6 @@ export default function Chat(){
 
 
     
-    console.log("render")
     
     return(
         <div className='chat-container' >
@@ -75,15 +78,24 @@ export default function Chat(){
                             <Read />
                         </div>
                     <div className='input-message'>
-                        <button onClick={handleComplaints} className='report'>{loadingComplaint ? ('Loading...'):('Report chat')}</button>
+                        <button 
+                            onClick={handleComplaints}
+                            className="button__fab">{loadingComplaint ? ('Loading...'):('Report chat')}</button>
+
+
                         <div>
                             <textarea  
                             value={sendMsj}
                             onChange={(e)=>setSendMsj(e.target.value)}
                             maxLength="200"
                             placeholder='Start typing here'/>
-                            <button onClick={handleSend}>SEND</button>
-
+                            <button 
+                                onClick={handleSend}
+                                className="button" 
+                                style={{margin: '0px', borderRadius: '50px', border: 'unset', width: '150px', color: '#fff'}} 
+                            >
+                                Send
+                            </button>
                         </div>
                     </div>
                 </div>

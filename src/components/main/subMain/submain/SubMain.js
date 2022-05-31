@@ -1,13 +1,13 @@
 import React, {useContext, useEffect} from 'react';
-import { AppContext } from '../../../../context/AppContext.js';
-import Chat from '../Chat/Chat';
-import UserList from '../UsersList/UserList';
+import { AppContext } from '../../../../context/AppContext';
+import { ReadChat } from '../chat/ReadChat';
+import { Users } from '../users/Users';
 import axios from 'axios';
 import io from 'socket.io-client';
-import './Submain.css';
+import './submain.css';
 
 
-export default function SubMain(){
+export const SubMain = () => {
 
     const { token, setChats, messages } = useContext(AppContext);
     
@@ -55,8 +55,8 @@ export default function SubMain(){
     return(
         <div className='sub-main'>
             <div className='sub-main-container'>
-                <UserList />
-                <Chat />
+                <Users/>
+                <ReadChat />
             </div>
             
             

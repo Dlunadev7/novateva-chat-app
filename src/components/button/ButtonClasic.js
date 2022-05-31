@@ -2,12 +2,13 @@ import React from 'react'
 
 import './buttonClasic.css'
 
-export const Button = ({title}) => {
+export const ButtonClasic = ({title, handleClick}) => {
+
+
   return (
-    <div className="buttonClasic">
-      <img src={image} alt="chat icon" />
+    <div className="buttonClasic" onClick={handleClick}>
       <p className="buttonClasic__title">{title}</p>
-    </div>
+    </div >
   )
 }
  

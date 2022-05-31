@@ -41,6 +41,8 @@
     border-radius: 20px;
     background-color: #FFF9FE;
     margin: 32px 0;
+    justify-content: center;
+    align-items: center;
 }
 .complaints__report__img {
     height: 200px;
@@ -62,6 +64,26 @@
     outline: none;
     text-align: center;
 }
+
+.complaints__buttons {
+    display: flex;
+    width: 100%;
+}
+
+.button__fab {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(178.18deg, #FD749B -13.56%, #281AC8 158.3%);
+    position: absolute;
+    top: 120px;
+    right: 25px;
+    font-size: 11px;
+    color: #fff;
+    font-weight: 700;
+    border: unset;
+    cursor: pointer;
+  }
 
 .complaints{
     width: 100%;

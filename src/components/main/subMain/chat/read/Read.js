@@ -1,15 +1,13 @@
 import React, {useContext} from 'react';
-import { AppContext } from '../../../../../context/AppContext.js';
-import Message from '../Message/Message';
+import { AppContext } from '../../../../../context/AppContext';
+import { Message } from '../message/Message';
 import axios from 'axios';
-import '../Chat.css';
+import '../readChat.css';
 
-export default function Read(){
+export const Read = () => {
     const {user,token, chats, messages} = useContext(AppContext);
     const dateFrom =(date)=>new Date(date).getTime()
     let read = [];
-
-    console.log(messages)
 
     if(chats && token.auth){
         const chat = chats.find((chat)=> chat._id === messages.chatId);

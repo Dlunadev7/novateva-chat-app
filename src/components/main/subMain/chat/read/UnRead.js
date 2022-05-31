@@ -1,17 +1,16 @@
-import React, {useContext, useEffect} from 'react';
-import { AppContext } from '../../../../../context/AppContext.js';
-import Message from '../Message/Message';
-import '../Chat.css';
+import React, {useContext} from 'react';
+import { AppContext } from '../../../../../context/AppContext';
+import { Message } from '../message/Message';
+import '../readChat.css';
 
-export default function UnRead(){
+export const UnRead = () => {
     const {user, chats,  messages} = useContext(AppContext);
     const dateFrom =(date)=>new Date(date).getTime()
     let unRead = [];
     
-
-    useEffect(() => {
         if(messages.userMessages){
             const chat = chats.find((chat)=> chat._id === messages.chatId);
+
             if(chat._id){
                 chat.messages.sort((a, b)=>{return dateFrom(a.createdAt) < dateFrom(b.createdAt) })
                 unRead = chat.messages.filter((msj)=>{
@@ -24,11 +23,6 @@ export default function UnRead(){
                 )
 
             }
-        }
-    }, [])
-    
-    
-       
             return (
                 <div className='conversation' style={unRead.length > 0? ({display: 'flex'}):({display:'none'})}>
                     
@@ -49,3 +43,5 @@ export default function UnRead(){
                 
             )
         }
+    
+}

@@ -4,11 +4,11 @@ import { SignUp } from "./auth/signUp/SignUp";
 
 
 import { ChatScreen } from "../screens/chat/ChatScreen";
-import { LoginScreen } from "../screens/login/LoginScreen";
+import { LoginScreen } from "../screens/auth/LoginScreen";
 
 import { Complaints } from "./main/complains/Complaints";
-import Delete from "./main/delete/Delete";
-import SubMain from "./main/subMain/Submain/SubMain";
+import { Delete } from "./main/delete/Delete";
+import { SubMain } from "./main/subMain/submain/SubMain";
 
 
 
