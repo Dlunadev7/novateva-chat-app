@@ -14,7 +14,6 @@ export const AppProvider = ({ children }) => {
   const [ newChat, setNewChat ] = useState(false);
   const [ unReadNum, setUnReadNum ] = useState([]);
   const [ url, setUrl ] = useState('');
-  const [isOpen, setIsOpen] = useState(false)
 
   const MemoizedData = useMemo(() => ({
       user,
@@ -39,13 +38,11 @@ export const AppProvider = ({ children }) => {
       setUnReadNum, 
       url, 
       setUrl,
-      isOpen,
-      setIsOpen
   }), [
     user,
     userList,
     token,
-    chats.length,
+    chats,
     messages,
     redirect,
     loading,
@@ -53,7 +50,6 @@ export const AppProvider = ({ children }) => {
     newChat,
     unReadNum,
     url,
-    isOpen
   ])
 
   return (

@@ -1,14 +1,13 @@
 import React, {useContext, useEffect} from 'react';
 import { AppContext } from '../../../../context/AppContext';
-import { ReadChat } from '../chat/ReadChat';
 import { Users } from '../users/Users';
 import axios from 'axios';
 import io from 'socket.io-client';
 import './submain.css';
+import { ReadChat } from '../chat/ReadChat';
 
 
 export const SubMain = () => {
-
     const { token, setChats, messages } = useContext(AppContext);
     
     
@@ -55,7 +54,7 @@ export const SubMain = () => {
     return(
         <div className='sub-main'>
             <div className='sub-main-container'>
-                <Users/>
+                <Users />
                 <ReadChat />
             </div>
             
