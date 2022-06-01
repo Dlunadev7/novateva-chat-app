@@ -120,7 +120,6 @@ export const Login = () => {
                   />
               </span>
             </label>
-            {error ? (<p style={{color: 'red', marginBottom: '32px'}}>Email or password incorrect</p>):('')}
             <span>
               ¿Need Account? <Link to={"/signUp"}>Sign Up</Link>
             </span>
