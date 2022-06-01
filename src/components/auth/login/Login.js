@@ -40,7 +40,7 @@ export const Login = () => {
         draggable: true,
         progress: undefined,
       })
-    } else if(email.length < 1) {
+    }  else if(error) {
       toast.warn('Contraseña o usuario incorrecto!', {
         position: "top-right",
         autoClose: 2000,
@@ -50,17 +50,7 @@ export const Login = () => {
         draggable: true,
         progress: undefined,
       })
-    } else if(password.length < 1) {
-      toast.warn('Contraseña o usuario incorrecto!', {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      })
-    } else {
+    } else if(!error){
       toast.success('Inicio de usuario con exito!', {
         position: "top-right",
         autoClose: 2000,
