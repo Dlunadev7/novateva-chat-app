@@ -2,7 +2,7 @@
     width: 301px;
     height: calc(100vh - 90);
     background: #FFFFFF;
-    border: 2px solid #F0F0F0;
+    border-right: 2px solid #F0F0F0;
 }
 
 .sub-user-list{
@@ -36,9 +36,9 @@
 
 .new-chat button{
     border-style: none;
-    width: 50%;
-    height: 35px;
-    border-radius: 20px;
+    width: 154px;
+    height: 48px;    
+    border-radius: 100px;
     background:  linear-gradient(178.18deg, #FD749B -13.56%, #281AC8 158.3%);
     color: white;
     font-weight: 600;

@@ -70,24 +70,25 @@ export const ReadChat = () => {
     
     
     return(
-        <div className='chat-container' >
+        <div className='chat' >
             {messages.chatId ? (
-                <div className='chat'>
+                <div className='chat__container'>
                         <div className='conversationContainer' id='conversationContainer'>
                             <UnRead />
                             <Read />
                         </div>
-                    <div className='input-message'>
+                    <div className='chat__input__message'>
                         <button 
                             onClick={handleComplaints}
                             className="button__fab">{loadingComplaint ? ('Loading...'):('Report chat')}</button>
 
 
-                        <div>
+                        <div className="chat__input__typer">
                             <textarea  
                             value={sendMsj}
                             onChange={(e)=>setSendMsj(e.target.value)}
                             maxLength="200"
+                            className="chat__input__search"
                             placeholder='Start typing here'/>
                             <button 
                                 onClick={handleSend}
@@ -99,7 +100,7 @@ export const ReadChat = () => {
                         </div>
                     </div>
                 </div>
-            ):(<h1 className='no-chat'>Novateva chat app</h1>)}
+            ):(<h1 className='no-chat'>Start typing something :)</h1>)}
             {redirectComplaint ? (<Navigate to='/chatapp/complaints' replace={true} />):('')}
         </div>
             
