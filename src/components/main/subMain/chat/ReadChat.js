@@ -92,7 +92,7 @@ export const ReadChat = () => {
                             <button 
                                 onClick={handleSend}
                                 className="button" 
-                                style={{margin: '0px', borderRadius: '50px', border: 'unset', width: '150px', color: '#fff'}} 
+                                style={{margin: '0px', borderRadius: '50px', border: 'unset', width: '84px', color: '#fff', padding: '0px', display: 'flex', justifyContent: 'center'}} 
                             >
                                 Send
                             </button>

@@ -44,14 +44,14 @@ export const Message = ( {user, id, date, content, postedBy}) => {
 
     
     return(
-        <div className='Message' style={postedBy === user._id ? ({alignItems: 'flex-end'}):({alignItems: 'flex-start'})}>
+        <div className='message' style={postedBy === user._id ? ({alignItems: 'flex-end'}):({alignItems: 'flex-start'})}>
             
-            <p className='date'>
+            <p className='message__date'>
                 {postedBy === user._id ? (<img src={trashCan} alt='' onClick={handleDelete} />):('')}
                 
                 {name()}, {dateFrom}
                 </p>
-            <p className='content'>{content}</p>
+            <p className='message__content'>{content}</p>
         </div>
     )
 }

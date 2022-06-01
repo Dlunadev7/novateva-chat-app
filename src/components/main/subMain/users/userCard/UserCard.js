@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import { AppContext } from '../../../../../context/AppContext.js';
 import axios from 'axios';
 import io from 'socket.io-client';
-import userPhoto from '../../../../../assets/user.png'
+import userPhoto from '../../../../../assets/defaultUserPicture.svg'
 import './userCard.css';
 
 export const UserCard = ( {id, img, chatId, photo}) => {
@@ -82,21 +82,21 @@ export const UserCard = ( {id, img, chatId, photo}) => {
 
     return(
         <div className='userCard' onClick={handleMessages}>
-            <div className='sub-userCard'>
-                <div className='profile-img' >
+            <div className='userCard__container'>
+                <div className='userCard__picture__container' >
                     {
                         photo ? (
-                            <img src={photo} className='img' alt='' />
+                            <img src={photo} className='userCard__picture' alt='' />
                         ):(
-                            <img src={userPhoto} className='img' alt='' />
+                            <img src={userPhoto} className='userCard__picture' alt='' />
                         )
                     }
                     
                 </div>
-                <div className='name'>
+                <p className='userCard__name'>
                     {userList ? (userList.length > 0 ? (name()):('Loading...')):('Loading...')}
                     
-                </div>
+                </p>
             </div>
            
             <div className='msj-number'  >

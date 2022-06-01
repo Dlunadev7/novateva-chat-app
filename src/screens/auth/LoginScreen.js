@@ -17,13 +17,12 @@ export const LoginScreen = () => {
   
 
   return (
-    <div className="Login">
-      <div className='subLogin'>
-        <div className='title'>
-            <h1>Welcome to </h1>
+    <div className="loginScreen">
+      <div className='loginScreen__container'>
+        <div className='loginScreen__title__container'>
             <h1>Novateva chat</h1>
         </div>
-        <div className='logOptions'>
+        <div className='loginScreen__options'>
           <Outlet />
         </div>
       </div>

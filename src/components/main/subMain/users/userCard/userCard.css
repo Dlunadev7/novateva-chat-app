@@ -1,87 +1,66 @@
 .userCard{
-    width: 100%;
-    height: 45px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    cursor: pointer;
-}
-.userCard:hover{
-    background-color:#FFF9FE ;
-}
-.sub-userCard{
-    width: 80%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 32px;
+  cursor: pointer;
 }
 
-.profile-img{
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    background-color: #858585;
+.userCard__container{
+  display: flex;
+  align-items: center;
 }
-.profile-img .img{
-    height: 100%;
-    width: 100%;
-    
+
+.userCard__picture__container{
+  height: 41px;
+  width: 41px;
+  margin-right: 12px;
 }
+
+.userCard__picture {
+  border-radius: 50%;
+  width: 100%;
+}
+
 .dot{
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  
 }
- 
-.name{
-    width: 80%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    color:#858585;
+
+.userCard__name {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 24px;
+  color: #858585;
 }
+
 .sub-userCard img{
-    height: 20px;
-    
-}
-
-.name p:first-child{
-    font-weight: 700;
-    font-size: 12px;
-}
-
-.name p:last-child{
-    font-weight: 400;
-    font-size: 10px;
+  height: 20px;
+  
 }
 
 .msj-number{
-    width: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .msj-number p{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 10px;
-    font-weight: 700;
-    border-radius: 50%;
-    background:  linear-gradient(178.18deg, #FD749B -13.56%, #281AC8 158.3%);
-    color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 50%;
+  background:  linear-gradient(178.18deg, #FD749B -13.56%, #281AC8 158.3%);
+  color: white;
 }
