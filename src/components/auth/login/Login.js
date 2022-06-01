@@ -30,8 +30,18 @@ export const Login = () => {
 
   const handleLogIn = async (e) => {
 
-    if(email.length < 1) {
-      toast('Contraseña o usuario incorrecto!', {
+    if(email.length <= 1 && password <= 1) {
+      toast.error('Todos los campos son obligatorios!', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      })
+    } else if(email.length < 1) {
+      toast.warn('Contraseña o usuario incorrecto!', {
         position: "top-right",
         autoClose: 2000,
         hideProgressBar: false,
@@ -41,7 +51,7 @@ export const Login = () => {
         progress: undefined,
       })
     } else if(password.length < 1) {
-      toast('Contraseña o usuario incorrecto!', {
+      toast.warn('Contraseña o usuario incorrecto!', {
         position: "top-right",
         autoClose: 2000,
         hideProgressBar: false,
@@ -51,7 +61,7 @@ export const Login = () => {
         progress: undefined,
       })
     } else {
-      toast('Incio de usuario con exito!', {
+      toast.success('Inicio de usuario con exito!', {
         position: "top-right",
         autoClose: 2000,
         hideProgressBar: false,

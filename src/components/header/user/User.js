@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import './user.css';
 
-import userPhoto from '../../../assets/user.png';
+import userPhoto from '../../../assets/defaultUserPicture.svg';
 import { AppContext } from '../../../context/AppContext';
 
 export const User = () => {

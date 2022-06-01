@@ -1,6 +1,4 @@
 import React from 'react';
-import { AppContext } from '../../context/AppContext';
-import bell from '../../assets/bell.svg';
 import searchIcon from '../../assets/search-icon.svg';
 import './header.css';
 import { User } from './user/User';

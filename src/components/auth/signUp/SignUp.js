@@ -24,8 +24,18 @@ export const SignUp = () => {
 
     e.preventDefault();
 
-    if(name.length < 1) {
-      toast('El nombre es obligatorio!', {
+    if(name.length <= 0 && lastName.length <= 0 && email.length <= 0 && password.length <= 0) {
+      toast.error('Todos los campos son obligatorios!', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      })
+    } else if(name.length < 1) {
+      toast.warn('El nombre es obligatorio!', {
         position: "top-right",
         autoClose: 2000,
         hideProgressBar: false,
@@ -35,7 +45,7 @@ export const SignUp = () => {
         progress: undefined,
       })
     } else if(lastName.length < 1) {
-      toast('El Apellido es obligatorio!', {
+      toast.warn('El Apellido es obligatorio!', {
         position: "top-right",
         autoClose: 2000,
         hideProgressBar: false,
@@ -45,7 +55,7 @@ export const SignUp = () => {
         progress: undefined,
       })
     } else if(email.length < 1) {
-      toast('El Email es obligatorio!', {
+      toast.warn('El Email es obligatorio!', {
         position: "top-right",
         autoClose: 2000,
         hideProgressBar: false,
@@ -55,7 +65,7 @@ export const SignUp = () => {
         progress: undefined,
       })
     } else if(password.length < 1) {
-      toast('La password es obligatorio!', {
+      toast.warn('La password es obligatorio!', {
         position: "top-right",
         autoClose: 2000,
         hideProgressBar: false,
@@ -64,8 +74,9 @@ export const SignUp = () => {
         draggable: true,
         progress: undefined,
       })
-    } else {
-      toast('¡Registracion de usuario con exito!', {
+    } 
+    else {
+      toast.success('¡Registracion de usuario con exito!', {
         position: "top-right",
         autoClose: 3000,
         hideProgressBar: false,
