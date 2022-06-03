@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 import { AppContext } from '../../../../../context/AppContext.js';
 import axios from 'axios';
 import io from 'socket.io-client';
@@ -19,8 +19,8 @@ export const UserCard = ( {id, img, chatId, photo}) => {
         if(userList.length > 0){
             const regEx1 = id.replace('{', '')
             const regEx2 = regEx1.replace('}', '')
-            const nam = userList.find((u)=> u._id === regEx2);
-            return `${nam.firstName + ' ' + nam.lastName}`;
+            const nam = userList?.find((u)=> u._id === regEx2);
+            return `${nam?.firstName + ' ' + nam?.lastName}`;
         }
         
     } 
@@ -93,10 +93,10 @@ export const UserCard = ( {id, img, chatId, photo}) => {
                     }
                     
                 </div>
-                <p className='userCard__name'>
+                <div className='userCard__name'>
                     {userList ? (userList.length > 0 ? (name()):('Loading...')):('Loading...')}
                     
-                </p>
+                </div>
             </div>
            
             <div className='msj-number'  >

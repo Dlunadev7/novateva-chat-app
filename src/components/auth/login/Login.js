@@ -30,7 +30,7 @@ export const Login = () => {
 
   const handleLogIn = async (e) => {
 
-    if(email.length <= 1 && password <= 1) {
+    if(email.length <= 1) {
       toast.error('Todos los campos son obligatorios!', {
         position: "top-right",
         autoClose: 2000,
@@ -40,7 +40,7 @@ export const Login = () => {
         draggable: true,
         progress: undefined,
       })
-    }  else if(error) {
+    }  else if(password.length <= 1) {
       toast.warn('Contraseña o usuario incorrecto!', {
         position: "top-right",
         autoClose: 2000,
@@ -50,7 +50,7 @@ export const Login = () => {
         draggable: true,
         progress: undefined,
       })
-    } else if(!error){
+    } else if( email.length <= 1 && password <= 1){
       toast.success('Inicio de usuario con exito!', {
         position: "top-right",
         autoClose: 2000,
