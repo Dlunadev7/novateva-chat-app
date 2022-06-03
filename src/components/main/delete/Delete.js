@@ -16,15 +16,15 @@ export const Delete = () => {
       const UId = userIds.find((id)=>{
           const regEx1 = id.replace('{', '')
           const regEx2 = regEx1.replace('}', '')
-          return regEx2 !== user._id
+          return regEx2 !== user?._id
       })
       
-      const nam = userList.find((u)=> {
+      const nam = userList?.find((u)=> {
           const regEx1 = UId.replace('{', '')
           const regEx2 = regEx1.replace('}', '')
       return u._id === regEx2});
 
-      return `${nam.firstName + ' ' + nam.lastName}`;
+      return `${nam?.firstName + ' ' + nam?.lastName}`;
     }
   }
 
@@ -58,7 +58,7 @@ export const Delete = () => {
               return(
                 <div className='chat__card' key={chat._id} onClick={()=>setDelete(chat._id)} style={deleteChat ? (deleteChat === chat._id ? ({filter:'brightness(80%)'}):({filter:'brightness(100%)'})):({})}>
                   <img  className="chat__card__image" src={userPhoto} alt='' />
-                  <h3 className="chat__card__name">{findUserName(chat.userIds)}</h3>
+                  <h3 className="chat__card__name">{findUserName(chat?.userIds)}</h3>
                 </div>
               )
                   

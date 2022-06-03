@@ -22,7 +22,6 @@ export const UserCard = ( {id, img, chatId, photo}) => {
             const nam = userList?.find((u)=> u._id === regEx2);
             return `${nam?.firstName + ' ' + nam?.lastName}`;
         }
-        
     } 
 
     const handleMessages = async ()=>{
